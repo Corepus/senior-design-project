@@ -18,6 +18,7 @@
 		73407CC7224ADCE600C21AF1 /* EdgeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73407CC6224ADCE600C21AF1 /* EdgeAdapter.swift */; };
 		73407CC9224ADD0E00C21AF1 /* GetEdgeWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73407CC8224ADD0E00C21AF1 /* GetEdgeWeight.swift */; };
 		73407CCB224ADD4E00C21AF1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73407CCA224ADD4E00C21AF1 /* Node.swift */; };
+		EE46B4BA2250494F00BC3964 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46B4B92250494F00BC3964 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		73407CC6224ADCE600C21AF1 /* EdgeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeAdapter.swift; sourceTree = "<group>"; };
 		73407CC8224ADD0E00C21AF1 /* GetEdgeWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEdgeWeight.swift; sourceTree = "<group>"; };
 		73407CCA224ADD4E00C21AF1 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		EE46B4B92250494F00BC3964 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				730802B0224AD5BF00C58459 /* AppDelegate.swift */,
 				730802B2224AD5BF00C58459 /* ViewController.swift */,
+				EE46B4B92250494F00BC3964 /* TableViewController.swift */,
 				730802B4224AD5BF00C58459 /* Main.storyboard */,
 				730802B7224AD5C300C58459 /* Assets.xcassets */,
 				730802B9224AD5C300C58459 /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73407CC5224ADC9700C21AF1 /* DistanceMatrix.swift in Sources */,
+				EE46B4BA2250494F00BC3964 /* TableViewController.swift in Sources */,
 				730802B3224AD5BF00C58459 /* ViewController.swift in Sources */,
 				73407CC7224ADCE600C21AF1 /* EdgeAdapter.swift in Sources */,
 				73407CCB224ADD4E00C21AF1 /* Node.swift in Sources */,
