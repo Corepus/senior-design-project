@@ -10,16 +10,16 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var labelText: UILabel!
     @IBOutlet weak var input: UITextField!
+    @IBOutlet weak var list: UITableView!
     
-    var userInput: [String] = []
+    var userInput: [String]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         input.delegate = self
+        list.dataSource = self
         configureTapGesture()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     private func configureTapGesture() {
@@ -31,24 +31,34 @@ class ViewController: UIViewController, UITextFieldDelegate {
         input.resignFirstResponder()
     }
     
-
     @IBAction func addButton(_ sender: Any) {
         addToArray()
+        print("Hello")
     }
-    
-    @IBAction func click(_ sender: Any) {
-        print("Click Click Mother Fucker")
-    }
-    
+
     func addToArray() {
         guard let add = input.text else {return}
         input.text = ""
-        userInput.append(add)
-        print(userInput)
+        if add != "" {
+            userInput.append(add)
+            list.reloadData()
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         addToArray()
         return true
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userInput.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = list.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = userInput[indexPath.row]
+        return cell
     }
 }
